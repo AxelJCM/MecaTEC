@@ -1,4 +1,4 @@
 package com.example.mecatec.Funciones
 
-class RegistrodeCitas {
+class RegistroUsuario {
 }
