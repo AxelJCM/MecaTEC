@@ -6,6 +6,11 @@
 
 html {
     background-color: #16191c;
+    background-image: url('Imagenes/Llanta.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .responsive {
@@ -50,4 +55,15 @@ body{
     background-image: url('Imagenes/img3.jpg');
     background-size: cover;
     background-position: center;
+}
+
+.form{
+    top: 50%;
+    left: 88%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+}
+
+.text-light{
+    right: 50%;
 }

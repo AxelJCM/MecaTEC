@@ -5,11 +5,13 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PrincipalComponent } from './principal/principal.component';
 import { PdfComponent } from './pdf/pdf.component';
+import { CitasComponent } from './citas/citas.component';
 
 const appRoutes:Routes=[
   {path: '', component:PrincipalComponent},
   {path:'login', component:LoginComponent},
   {path: 'pdf', component:PdfComponent},
+  {path: 'citas', component:CitasComponent},
 ];
 
 @NgModule({
@@ -18,6 +20,8 @@ const appRoutes:Routes=[
     PrincipalComponent,
     LoginComponent,
     PdfComponent,
+    CitasComponent,
+
   ],
   imports: [
     BrowserModule,
