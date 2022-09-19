@@ -1,0 +1,51 @@
+package com.example.mecatec.Funciones
+
+import android.content.Intent
+import android.os.Bundle
+import android.os.Handler
+import android.os.ParcelFileDescriptor.open
+import androidx.appcompat.app.AppCompatActivity
+import com.example.mecatec.R
+import com.google.gson.Gson
+import java.io.IOException
+import org.json.JSONObject
+import java.util.Properties
+
+
+
+@Suppress("DEPRECATION")
+class Inicio: AppCompatActivity() {
+
+    lateinit var  handler: Handler
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.inicio)
+        handler = Handler()
+        handler.postDelayed({
+
+            val intent = Intent(this , Login::class.java)
+            startActivity(intent)
+            finish()
+        }, 3000)
+
+        val gson = Gson()
+    }
+        //Funcion de cargar archivo json
+        fun loadData ( inFile : String ) : String {
+            var tContents = ""
+            try {
+                val stream = assets.open(inFile)
+                val size = stream.available()
+                val buffer = ByteArray(size)
+                stream.read(buffer)
+                stream.close()
+                tContents = String(buffer)
+            } catch (e: IOException) {
+                // Handle exceptions here
+            }
+            return tContents
+        }
+}
+
+
