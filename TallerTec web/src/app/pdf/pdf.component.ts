@@ -2,7 +2,10 @@ import { Component, OnInit} from '@angular/core';
 import pdfMake from "pdfmake/build/pdfMake";
 import pdfFonts from "pdfmake/build/vfs_fonts";
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
+import { NgModule } from '@angular/core';
 import {Resume, Experience, Education, Skill} from "./resume"
 
 @Component({
@@ -25,7 +28,7 @@ export class PdfComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  /* createPdf(){
+  createPdf(){
 
     const pdfDefintion: any = {
       content: [
@@ -36,7 +39,7 @@ export class PdfComponent implements OnInit {
     }
     const pdf = pdfMake.createPdf(pdfDefintion);
     pdf.open();
-  } */
+  }
 
 
   addExperience() {
