@@ -1,4 +1,13 @@
 package com.example.mecatec.Funciones
 
-class RegistroCitas {
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import com.example.mecatec.R
+
+class RegistroCitas: AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.registrocitas)
+}
 }

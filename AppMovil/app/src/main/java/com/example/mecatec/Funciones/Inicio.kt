@@ -3,14 +3,11 @@ package com.example.mecatec.Funciones
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.os.ParcelFileDescriptor.open
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mecatec.R
 import com.google.gson.Gson
 import java.io.IOException
-import org.json.JSONObject
-import java.util.Properties
-
+import java.io.FileWriter
 
 
 @Suppress("DEPRECATION")
@@ -29,7 +26,15 @@ class Inicio: AppCompatActivity() {
             finish()
         }, 3000)
 
-        val gson = Gson()
+        //val gson = Gson()
+
+        //val json = loadData("basededatos.json")
+
+        //WriteToFile("xdlmao")
+
+        //val usuario = gson.fromJson(json, Usuario::class.java)
+
+        //Log.d("REEEs",usuario.contrasena)
     }
         //Funcion de cargar archivo json
         fun loadData ( inFile : String ) : String {
@@ -46,6 +51,15 @@ class Inicio: AppCompatActivity() {
             }
             return tContents
         }
+    fun WriteToFile(str:String){
+        try{
+            var fo = FileWriter("test.txt")
+            fo.write(str)
+            fo.close()
+        } catch(ex:Exception) {
+            print(ex.message)
+        }
+    }
 }
 
 
