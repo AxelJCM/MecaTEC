@@ -6,12 +6,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { PrincipalComponent } from './principal/principal.component';
 import { PdfComponent } from './pdf/pdf.component';
 import { CitasComponent } from './citas/citas.component';
+import { ClientesComponent } from './clientes/clientes.component';
 
 const appRoutes:Routes=[
   {path: '', component:PrincipalComponent},
   {path:'login', component:LoginComponent},
   {path: 'pdf', component:PdfComponent},
   {path: 'citas', component:CitasComponent},
+  {path: 'clientes', component:ClientesComponent},
 ];
 
 @NgModule({
@@ -21,6 +23,7 @@ const appRoutes:Routes=[
     LoginComponent,
     PdfComponent,
     CitasComponent,
+    ClientesComponent,
 
   ],
   imports: [

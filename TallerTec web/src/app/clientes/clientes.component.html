@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Registro de usuario</title>
+		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+		<link rel="stylesheet" href="clientes.component.css">
+	</head>
+	<body class="bg-dark">
+		<main>
+			<form action="mensaje.php" method="post" class="registro" id="registro">
+				
+				<!-- Para el usuario -->
+				<div class="registro__grupo" id="grupo__usuario">
+					<label for="usuario" class="registro__label">Usuario</label>
+
+					<div class="registro__grupo-input">
+						<input type="text" class="registro__input" name="usuario" id="usuario" placeholder="usuario123">
+						<i class="registro__validacion-estado fas fa-times-circle"></i> <!-- Icono para validar datos -->
+
+					</div>
+					<p class="registro__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p> <!-- Mensaje de error -->
+				</div>
+
+				<!-- Para el nombre -->
+				<div class="registro__grupo" id="grupo__nombre">
+					<label for="nombre" class="registro__label">Nombre</label>
+					<div class="registro__grupo-input">
+						<input type="text" class="registro__input" name="nombre" id="nombre" placeholder="John Doe">
+						<i class="registro__validacion-estado fas fa-times-circle"></i>
+					</div>
+					<p class="registro__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+				</div>
+
+				<!-- Para el numero de cedula -->
+
+				<div class="registro__grupo" id="grupo__cedula">
+					<label for="cedula" class="registro__label">Numero de identificacion</label>
+					<div class="registro__grupo-input">
+						<input type="text" class="registro__input" name="cedula" id="cedula" placeholder="12937403">
+						<i class="registro__validacion-estado fas fa-times-circle"></i>
+					</div>
+					<p class="registro__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+				</div>
+
+				<!-- Para la direccion -->
+
+				<div class="registro__grupo" id="grupo__direccion">
+					<label for="direccion" class="registro__label">Direccion</label>
+					<div class="registro__grupo-input">
+						<input type="text" class="registro__grupo_direccion" name="provincia" id="provincia" placeholder="Provincia">
+						<input type="text" class="registro__grupo_direccion" name="canton" id="canton" placeholder="Canton">
+						<input type="text" class="registro__grupo_direccion" name="distrito" id="distrito" placeholder="Distrito">
+						<i class="registro__validacion-estado fas fa-times-circle"></i>
+					</div>
+					<p class="registro__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener numeros, letras y guion bajo.</p>
+				</div>
+
+				<!-- Para el correo electronico -->
+				<div class="registro__grupo" id="grupo__correo">
+					<label for="correo" class="registro__label">Correo Electrónico</label>
+					<div class="registro__grupo-input">
+						<input type="email" class="registro__input" name="correo" id="correo" placeholder="correo@correo.com">
+						<i class="registro__validacion-estado fas fa-times-circle"></i>
+					</div>
+					<p class="registro__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+				</div>
+
+				<!-- Para el teléfono -->
+				<div class="registro__grupo" id="grupo__telefono">
+					<label for="telefono" class="registro__label">Teléfono</label>
+					<div class="registro__grupo-input">
+						<input type="text" class="registro__input" name="telefono" id="telefono" placeholder="4491234567">
+						<i class="registro__validacion-estado fas fa-times-circle"></i>
+					</div>
+					<p class="registro__input-error">El telefono solo puede contener numeros y el maximo son  dígitos.</p>
+				</div>
+
+				<!-- Para la contraseña -->
+				<div class="registro__grupo" id="grupo__password">
+					<label for="password" class="registro__label">Contraseña</label>
+					<div class="registro__grupo-input">
+						<input type="password" class="registro__input" name="password" id="password">
+						<i class="registro__validacion-estado fas fa-times-circle"></i>
+					</div>
+					<p class="registro__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+				</div>
+				<!-- Mensaje por si no rellena campos -->
+				<div class="registro__mensaje" id="registro__mensaje">
+					<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellenar el formulario. </p>
+				</div>
+
+				<!-- Para el boton de enviar -->
+
+				<div class="registro__grupo registro__grupo-btn-enviar" id="grupo_boton">
+					<button type="submit" class="registro__btn" name="boton">Enviar</button>
+					<p class="registro__mensaje-exito" id="registro__mensaje-exito">Formulario enviado exitosamente, en su correo encontrara la contrasena
+						para acceder a su cuenta.</p>
+				</div>
+			</form>
+		</main>
+			<!-- Optional JavaScript; choose one of the two! -->
+
+			<!-- Option 1: Bootstrap Bundle with Popper -->
+
+
+			<!-- Option 2: Separate Popper and Bootstrap JS -->
+			<!--
+			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+			<script src="js/bootstrap.min.js"</script>
+			-->
+			
+		<script src="formulario.js"></script>
+		<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+		
+	</body>
+</html>
+

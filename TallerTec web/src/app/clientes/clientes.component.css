@@ -1,0 +1,181 @@
+* {
+	box-sizing: border-box;
+	--dark: #16191c;
+    --dark-x: #1e2126;
+    --ligth: #ffffff;
+}
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #E5E5E5;
+    justify-content: center;
+    background-image: url(Imagenes\Llanta.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    flex-direction: column;
+    color: #fff;
+}
+
+main {
+	max-width: 800px;
+	width: 90%;
+	margin: auto;
+	padding: 40px;
+}
+
+.registro {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+
+.registro__label {
+	color: white;
+	display: block;
+	font-weight: 700;
+	padding: 10px;
+	cursor: pointer;
+	
+}
+
+.registro__grupo-input {
+	position: relative;
+}
+.registro__grupo_direccion{
+	position: relative; 
+	padding: 0 40px 0 10px;
+	grid-template-columns: 1fr;
+	border-radius: 3px;
+	line-height: 45px;
+	transition: .3s ease all;
+	margin-bottom: .80 px;
+	width: 100%;
+}
+.registro__input {
+	width: 100%;
+	background: #fff;
+	border: 3px solid transparent;
+	border-radius: 3px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0 40px 0 10px;
+	transition: .3s ease all;
+}
+
+/* Color al seleccionar los cuadros de texto */
+.registro__input:focus { 
+	border: 3px solid #0075FF;
+	outline: none;
+	
+}
+
+/* Esconder errores y darle formato */
+.registro__input-error {
+	font-size: 12px;
+	margin-bottom: 0;
+	display: none;
+}
+
+/* Mostrar el error en pantalla*/
+.registro__input-error-activo {
+	display: block;
+}
+
+/*Posicion de estado */
+.registro__validacion-estado {
+	position: absolute;
+	right: 10px;
+	bottom: 15px;
+	z-index: 100;
+	font-size: 16px;
+	opacity: 0;
+}
+
+/*Caracteristicas del boton*/
+.registro__btn {
+	height: 45px;
+	line-height: 45px;
+	width: 30%;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: .1s ease all;
+}
+
+.registro__btn:hover {
+	box-shadow: 3px 0px 30px rgba(163,163,163, 1);
+}
+
+.registro__mensaje {
+	height: 45px;
+	line-height: 45px;
+	background: #F66060;
+	padding: 0 15px;
+	border-radius: 3px;
+	display: none;
+}
+
+.registro__mensaje-activo {
+	display: block;
+}
+
+.registro__mensaje p {
+	margin: 0;
+}
+
+/*Ocultar mensaje de exito*/
+.registro__mensaje-exito {
+	font-size: 14px;
+	color: #119200;
+	display: none;
+}
+/*Activar mensaje de exito*/
+.registro__mensaje-exito-activo {
+	display: block;
+}
+
+/* ----- -----  Estilos para Validacion ----- ----- */
+.registro__grupo-correcto .registro__validacion-estado {
+	color: #1ed12d;
+	opacity: 1;
+}
+
+.registro__grupo-incorrecto .registro__label {
+	color: #bb2929;
+}
+
+.registro__grupo-incorrecto .registro__validacion-estado {
+	color: #bb2929;
+	opacity: 1;
+}
+
+.registro__grupo-incorrecto .registro__input {
+	border: 3px solid #bb2929;
+}
+
+/* Para que sea responsivo */
+
+@media screen and (max-width: 800px) {
+	.registro {
+		grid-template-columns: 1fr;
+	}
+
+
+	.registro__mensaje,
+	.registro__grupo-btn-enviar {
+		grid-column: 1;
+	}
+
+	.registro__btn {
+		width: 100%;
+	}
+}
+
+.bg-dark {background-color: var(--dark) !important;}
+.bg-dark-x {background-color: var(--dark-x);}
