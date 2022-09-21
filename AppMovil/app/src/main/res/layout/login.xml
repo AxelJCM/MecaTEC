@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@color/colorfactfont">
 
     <TextView
         android:id="@+id/lblCineTECxD"
@@ -11,7 +13,7 @@
         android:layout_height="55dp"
         android:gravity="center"
         android:text="Bienvenido a MecaTEC"
-        android:textColor="@android:color/holo_red_light"
+        android:textColor="@color/black"
         android:textSize="30sp"
         app:fontFamily="@font/cairo"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,7 +28,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Usuario"
-        android:textColor="@android:color/holo_red_light"
+        android:textColor="@color/cardview_dark_background"
         android:textSize="24sp"
         app:fontFamily="@font/cairo"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -40,25 +42,25 @@
         android:id="@+id/inputusuario"
         android:layout_width="225dp"
         android:layout_height="40dp"
-        android:layout_marginBottom="22dp"
-        android:background="@android:color/holo_red_light"
+        android:background="@color/colorfact"
         android:ems="10"
         android:inputType="textPersonName"
-        android:textColor="@android:color/background_light"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintBottom_toTopOf="@+id/lblMecaTec2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.515" />
+        app:layout_constraintVertical_bias="0.929" />
 
     <EditText
         android:id="@+id/inputcontrasena"
         android:layout_width="226dp"
-        android:layout_height="49dp"
-        android:background="@android:color/holo_red_light"
+        android:layout_height="39dp"
+        android:background="@color/colorfact"
         android:ems="10"
         android:inputType="textPassword"
-        android:textColor="@android:color/background_light"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -71,36 +73,35 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contraseña"
-        android:textColor="@android:color/holo_red_light"
+        android:textColor="@color/cardview_dark_background"
         android:textSize="24sp"
         app:fontFamily="@font/cairo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.57" />
+        app:layout_constraintVertical_bias="0.594" />
 
     <Button
         android:id="@+id/btnlog"
         android:layout_width="201dp"
         android:layout_height="59dp"
         android:text="Entrar"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@color/colorfact"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.802" />
+        app:layout_constraintVertical_bias="0.806" />
 
     <Button
         android:id="@+id/btnreg"
         android:layout_width="201dp"
         android:layout_height="59dp"
         android:text="Registrarse"
-        android:textColor="@android:color/background_dark"
+        android:textColor="@color/colorfact"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

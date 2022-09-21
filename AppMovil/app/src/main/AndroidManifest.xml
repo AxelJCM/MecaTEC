@@ -34,7 +34,7 @@
         <activity android:name=".Funciones.Login"/>
         <activity android:name=".Funciones.Clientes" />
         <activity android:name=".Funciones.Facturacion" />
-        <activity android:name=".Funciones.Menu" />
+        <activity android:name=".Funciones.Menu"/>
         <activity android:name=".Funciones.RegistroCitas" />
         <activity android:name=".Funciones.RegistroUsuario"/>
         <activity android:name=".Funciones.Trabajadores"/>

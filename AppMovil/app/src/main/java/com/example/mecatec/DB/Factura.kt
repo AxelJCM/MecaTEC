@@ -1,5 +1,7 @@
 package com.example.mecatec.DB
 
-class Factura {
+data class Factura (
+    val servicioescogido: String,
+    val sucursalescogido: String
+    )
 
-}

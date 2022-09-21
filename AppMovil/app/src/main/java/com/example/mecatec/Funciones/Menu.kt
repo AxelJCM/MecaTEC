@@ -21,21 +21,25 @@ class Menu : AppCompatActivity() {
 
     ///////////////API////////////////
     //Funcion encargada de solicitar GET del API mediante un boton en la pantalla
-    btnsucursal.setOnClickListener {
-        startActivity(Intent(this, Sucursales::class.java))
-    }
+    //btnsucursal.setOnClickListener {
+    //    startActivity(Intent(this, ::class.java))
+    //}
     //Pantalla transferencia
     btnfacturas.setOnClickListener {
         startActivity(
             Intent(this, Facturacion::class.java)
         )
     }
-    //Pantalla tarjetas
+    //Pantalla Registro Citas
     btncitas.setOnClickListener {
         startActivity(
             Intent(this, RegistroCitas::class.java)
         )
     }
+        btngestion.setOnClickListener {
+            val API = RestAPIService()
+            API.getAccount(detalles)
+        }
 }
 
 /** Funcion encarcada de mostrar detalles de la cuenta del GET en pantalla

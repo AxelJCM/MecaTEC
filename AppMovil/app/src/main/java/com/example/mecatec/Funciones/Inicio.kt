@@ -37,6 +37,9 @@ class Inicio: AppCompatActivity() {
         //Log.d("REEEs",usuario.contrasena)
     }
         //Funcion de cargar archivo json
+    /***
+     * Funcion para cargar base de datos en archivo .JSON
+     */
         fun loadData ( inFile : String ) : String {
             var tContents = ""
             try {
@@ -51,6 +54,10 @@ class Inicio: AppCompatActivity() {
             }
             return tContents
         }
+
+    /***
+     * Intento de funcion para escribir en archivo.JSON
+     */
     fun WriteToFile(str:String){
         try{
             var fo = FileWriter("test.txt")
