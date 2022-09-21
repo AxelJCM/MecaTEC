@@ -8,7 +8,6 @@ export class Resume {
     email: string;
     socialProfile: string;
     experiences: Experience[] = [];
-    educations: Education[] = [];
     otherDetails: string;
     skills: Skill[] = [];
 

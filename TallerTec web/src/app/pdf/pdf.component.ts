@@ -28,7 +28,7 @@ export class PdfComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  createPdf(){
+  /* createPdf(){
 
     const pdfDefintion: any = {
       content: [
@@ -39,7 +39,7 @@ export class PdfComponent implements OnInit {
     }
     const pdf = pdfMake.createPdf(pdfDefintion);
     pdf.open();
-  }
+  } */
 
 
   addExperience() {
@@ -72,11 +72,6 @@ export class PdfComponent implements OnInit {
             {
               text: 'Contant No : ' + this.resume.contactNo,
             },
-            {
-              text: 'GitHub: ' + this.resume.socialProfile,
-              link: this.resume.socialProfile,
-              color: 'blue',
-            }
             ],
             [
               // Document definition for Profile pic
